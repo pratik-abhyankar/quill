@@ -24,11 +24,14 @@
               </v-form>
             </v-card-text>
             <v-card-actions>
-              <v-spacer></v-spacer>
               <v-btn color="primary" block>Login</v-btn>
-              <v-spacer></v-spacer>
             </v-card-actions>
-            <br>
+          </v-card>
+          <div class="title text-xs-center white--text mb-2 mt-2">OR</div>
+          <v-card>
+            <v-card-actions class="text-xs-center">
+              <div class="subheading">Create a new Profile!</div>
+            </v-card-actions>
           </v-card>
         </v-flex>
       </v-layout>
