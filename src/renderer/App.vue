@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-app>
-      <v-fade-transition>
+      <v-fade-transition mode="out-in">
         <router-view></router-view>
       </v-fade-transition>
     </v-app>
@@ -15,5 +15,7 @@
 </script>
 
 <style>
-  /* CSS */
+  html { 
+    overflow: auto !important;
+  }
 </style>
