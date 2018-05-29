@@ -7,7 +7,7 @@
             <v-toolbar color="blue darken-4" dark>
               <v-spacer></v-spacer>
               <div class="headline text-xs-center">Login</div>
-              <router-link to="create-profile-page">
+              <router-link :to="{name: 'create-profile-page'}">
                 <v-btn fab bottom right absolute color="primary">
                   <v-icon class="toolbar-fix">add</v-icon>
                 </v-btn>
@@ -34,11 +34,15 @@
               </v-form>
             </v-card-text>
             <v-card-actions>
-              <v-btn color="primary" block>Login</v-btn>
+              <v-spacer></v-spacer>
+              <v-btn color="primary">Login</v-btn>
+              <v-spacer></v-spacer>
             </v-card-actions>
             <v-card-text>
               <div class="body-1 text-xs-center">
-                <router-link to="forgot-password-page">Forgot your password?</router-link>
+                <router-link :to="{name: 'forgot-password-page'}" class="router-link">
+                  Forgot your password?
+                </router-link>
               </div>
             </v-card-text>
           </v-card>
@@ -71,16 +75,23 @@
     background-image: url('~@/assets/login-background.jpg');
     background-size: cover;
   }
+
   .container {
-    background-color: rgba(25, 118, 210, 0.3);
+    /* background-color: rgba(25, 118, 210, 0.2); */
+    background-color: rgba(30, 30, 30, 0.3);
   }
+
   .card {
     background-color: rgba(255, 255, 255, 0.75);
   }
-  /* .create-float-btn {
-    position: absolute;
-  } */
+
+  /* The following fix is required to position the btn icon at the center. 
+  This is a bug in Vuetify where the icon moves at the top due to height: inherit property */
   .toolbar-fix{
     height: auto;
+  }
+
+  .router-link {
+    color: #0D47A1; /* blue darken-4 color*/
   }
 </style>
