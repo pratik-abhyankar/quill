@@ -2,9 +2,10 @@
   <v-content>
     <v-container fluid fill-height>
       <v-layout align-center justify-center>
-        <v-flex xs12 sm6 md5 lg4>
+        <v-flex xs10 sm6 md5 lg4>
           <v-card class="elevation-24">
             <v-card-text>
+              <div class="headline text-xs-center">Login</div>
               <v-form>
                 <v-text-field 
                   prepend-icon="person"
@@ -26,11 +27,17 @@
             <v-card-actions>
               <v-btn color="primary" block>Login</v-btn>
             </v-card-actions>
-          </v-card>
-          <div class="title text-xs-center white--text mb-2 mt-2">OR</div>
-          <v-card>
-            <v-card-actions class="text-xs-center">
-              <div class="subheading">Create a new Profile!</div>
+            <v-card-actions>
+              <div class="body-1">
+                <router-link to="forgot-password-page">Forgot Password?</router-link>
+              </div>
+              <v-spacer></v-spacer>
+              <div class="body-1">
+                Don't have a profile yet? 
+                <router-link to="create-profile-page" class="router-link">
+                  Create new!
+                </router-link>
+              </div>
             </v-card-actions>
           </v-card>
         </v-flex>
@@ -66,6 +73,6 @@
     background-color: rgba(25, 118, 210, 0.25);
   }
   .card {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.75);
   }
 </style>

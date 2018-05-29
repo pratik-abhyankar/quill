@@ -11,9 +11,14 @@ export default new Router({
       component: require('@/components/Authentication/Login').default
     },
     {
-      path: '/signup',
-      name: 'singup-page',
-      component: require('@/components/Authentication/SignUp').default
+      path: '/create-profile',
+      name: 'create-profile-page',
+      component: require('@/components/Authentication/CreateProfile').default
+    },
+    {
+      path: '/forgot-password',
+      name: 'forgot-password-page',
+      component: require('@/components/Authentication/ForgotPassword').default
     },
     {
       path: '*',
